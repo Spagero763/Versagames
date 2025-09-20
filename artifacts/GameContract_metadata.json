@@ -1,0 +1,165 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_gameFee",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "player",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "feePaid",
+						"type": "uint256"
+					}
+				],
+				"name": "PlayerRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "gameFee",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "hasPaidToPlay",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "playGame",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_newFee",
+						"type": "uint256"
+					}
+				],
+				"name": "setGameFee",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"playGame()": {
+					"details": "Allows a player to pay the fee and register for the game."
+				},
+				"setGameFee(uint256)": {
+					"details": "Updates the game fee (owner-only)."
+				},
+				"withdraw()": {
+					"details": "Withdraws contract balance to the owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"playGame()": {
+					"notice": "Emits `PlayerRegistered` on success."
+				},
+				"withdraw()": {
+					"notice": "Only callable by the owner."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"versaGame.sol": "GameContract"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"versaGame.sol": {
+			"keccak256": "0xc86f618e3e796a72dc05f5e4696a8e348daf3f24ad7097f3fa6c1df13bca324b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2749d4b977e3c44f4a73d491656574d99a15a082224948dc7f3c09b54d2d58ef",
+				"dweb:/ipfs/QmYP4GkXDgAoRo6vhGLFqsYAgcNPxddJRUzJ6L9AqqNafy"
+			]
+		}
+	},
+	"version": 1
+}
